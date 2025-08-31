@@ -4,15 +4,29 @@ services:
     build: ./service-utilisateurs
     ports:
       - '3000:3000'
+    volumes:
+      - utilisateurs_data:/data
   produits:
     build: ./service-produits
     ports:
       - '3001:3001'
+    volumes:
+      - produits_data:/data
   commandes:
     build: ./service-commandes
     ports:
       - '3002:3002'
+    volumes:
+      - commandes_data:/data
   paiements:
     build: ./service-paiements
     ports:
       - '3003:3003'
+    volumes:
+      - paiements_data:/data
+
+volumes:
+  utilisateurs_data:
+  produits_data:
+  commandes_data:
+  paiements_data:
