@@ -1,0 +1,18 @@
+version: '3'
+services:
+  utilisateurs:
+    build: ./service-utilisateurs
+    ports:
+      - '3000:3000'
+  produits:
+    build: ./service-produits
+    ports:
+      - '3001:3001'
+  commandes:
+    build: ./service-commandes
+    ports:
+      - '3002:3002'
+  paiements:
+    build: ./service-paiements
+    ports:
+      - '3003:3003'
